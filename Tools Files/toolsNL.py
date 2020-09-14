@@ -43,7 +43,7 @@ def sumDigits(a):
         total = total + int(a[i])
 
     return total
-print(sumDigits(1234))
+
     #Trace Table:
     #a = "1234"
     # i | i < len(a)|
@@ -70,4 +70,48 @@ def sumDigitsA(a):
   # 57| 57 > 0 | TRUE RUN LOOP total = total + 57%10 = 7
   # 5 | 5 > 0 | TRUE RUN LOOP total = total + 5%10 = 12
   # 0 | 0 > 0 | FALSE EXIT LOOP
-print(sumDigitsA(57))
+
+
+''' scaleElementsA takes an integer value a and a list reference b. 
+This function should scale each elemnt of b'''
+
+def scaleElementA(int, b):
+    for i in range(0,len(int)):
+        int[i] = int[i]*b #Change value inside the array
+        
+''' scaleElementsB will create another list with the equal length of the previous
+array.
+
+For example if the list is [1,2,3,4] and the scale factor a = 2 then the returned array
+should be [2,4,6,8]'''
+
+def scaleElementB(int,b):
+    array = []
+    for i in range(0,len(int)):
+        int[i] = int[i]*b #Calculate new value 
+        array.append(int[i]) #Insert value into new array
+    return array
+
+
+
+'''addStringsSmallLarge will take two strings as arguements.
+The function should return a new string consisting of the two strings
+combined with the largest string first. If the strings are of equal length it
+will return the first argument followed by the second argument'''
+
+def addStringsSmallLarge(string1,string2):
+    string = ""#Empty string to combine 2 arguements later
+    
+    string1 = str(string1)
+    string2 = str(string2)
+
+    a = len(string1)
+    b = len(string2)
+
+    if a > b or a == b:
+        string = string1 + " " + string2
+    elif a < b:
+        string = string2 + " " + string1
+
+    return string
+
